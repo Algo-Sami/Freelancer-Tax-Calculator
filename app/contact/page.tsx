@@ -89,9 +89,8 @@ export default function ContactPage() {
           <div className="mt-8 border-t border-dashed border-ink/40 pt-4 text-center">
             <span className="font-space text-[10px] text-ink/60 uppercase">Alternatively, send an email to:</span>
             <p className="font-mono text-xs text-ledger font-bold mt-1 uppercase selection:bg-ledger selection:text-paper">
-              [ACTUAL EMAIL]
+              su2823251@gmail.com
             </p>
-            <p className="font-mono text-[9px] text-ink/40 mt-1 uppercase">(contact email coming soon)</p>
           </div>
         </div>
 
