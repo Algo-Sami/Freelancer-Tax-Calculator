@@ -197,10 +197,10 @@ export default function ContactPage() {
             </span>
             <p className="font-mono text-xs text-ledger font-bold mt-1 uppercase selection:bg-ledger selection:text-paper">
               <a
-                href="mailto:contact@freelancertax.pk"
+                href="mailto:freelancertaxofficial@gmail.com"
                 className="hover:underline underline-offset-2"
               >
-                contact@freelancertax.pk
+                freelancertaxofficial@gmail.com
               </a>
             </p>
           </div>
