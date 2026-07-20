@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #F5F3ED;
+  --color-ink: #1C2B22;
+  --color-ledger: #1F5138;
+  --color-stamp: #AB3B2A;
+  --color-gold: #9C6B22;
+  --color-ledger-light: #EAE6DB;
+  --color-ledger-dark: #122018;
+
+  --font-space: var(--font-space-grotesk);
+  --font-mono: var(--font-ibm-plex-mono);
+}
+
+:root {
+  --background: #F5F3ED;
+  --foreground: #1C2B22;
+  --primary: #1F5138;
+  --accent-stamp: #AB3B2A;
+  --accent-gold: #9C6B22;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-space-grotesk), sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom interactive styles */
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Custom receipt perforated edge details */
+.perforated-border {
+  background-image: radial-gradient(circle, transparent 4px, currentColor 4px);
+  background-size: 12px 12px;
+  background-repeat: repeat-x;
+}
+
+.perforated-top {
+  position: relative;
+}
+.perforated-top::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-image: radial-gradient(circle at 6px 0px, transparent 4px, currentColor 4px);
+  background-size: 12px 6px;
+  background-repeat: repeat-x;
+  color: #F5F3ED; /* matches paper bg */
+}
+
+.perforated-bottom {
+  position: relative;
+}
+.perforated-bottom::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background-image: radial-gradient(circle at 6px 6px, transparent 4px, currentColor 4px);
+  background-size: 12px 6px;
+  background-repeat: repeat-x;
+  color: #F5F3ED; /* matches paper bg */
+}
