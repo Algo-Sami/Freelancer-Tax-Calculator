@@ -51,14 +51,7 @@ export default function PrivacyPolicyPage() {
             </p>
 
             <h3 className="font-bold text-ink mt-6 mb-1">
-              3. Analytical Tracking
-            </h3>
-            <p>
-              We use minimal, privacy-centric analytics to trace general site traffic volumes and page popularities. This includes tracking non-identifiable user agents, generic locations (country level), and navigation patterns.
-            </p>
-
-            <h3 className="font-bold text-ink mt-6 mb-1">
-              4. External Compliance
+              3. External Compliance
             </h3>
             <p>
               Our calculators are estimates only and do not constitute legal tax advice. We provide links to external resources like FBR and PSEB portals. We are not responsible for the privacy practices or data collection protocols of these third-party institutions.

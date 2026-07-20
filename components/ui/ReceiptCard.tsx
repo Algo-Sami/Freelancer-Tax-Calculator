@@ -16,6 +16,8 @@ interface ReceiptCardProps {
   totalLabel?: string;
   totalAmount: number;
   note?: string;
+  /** Identifier shown on the receipt header. Defaults to "FBR-SALARY-PK". */
+  sysId?: string;
 }
 
 export default function ReceiptCard({
@@ -26,6 +28,7 @@ export default function ReceiptCard({
   totalLabel = "NET PAYOUT",
   totalAmount,
   note,
+  sysId = "FBR-SALARY-PK",
 }: ReceiptCardProps) {
   const formatter = currency === "USD" ? formatUSD : (val: number) => `Rs. ${formatPKR(val)}`;
 
@@ -40,7 +43,7 @@ export default function ReceiptCard({
         <p className="font-mono text-xs opacity-60">
           DATE: {new Date().toLocaleDateString("en-PK", { year: "numeric", month: "short", day: "numeric" })}
         </p>
-        <p className="font-mono text-xs opacity-60">SYS_ID: 154A-FBR-PK</p>
+        <p className="font-mono text-xs opacity-60">SYS_ID: {sysId}</p>
       </div>
 
       {/* Invoice Starting Amount */}

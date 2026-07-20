@@ -43,7 +43,7 @@ export default function AboutPage() {
               Who built this?
             </h3>
             <p>
-              This platform was created by a collective of independent software engineers and tax consultants who believe that financial literacy should be open, accessible, and completely free. We do not store, track, or share your input salary or payout data — all calculations run entirely on the client side inside your web browser.
+              This tool was built by an independent Pakistani developer and freelancer who grew frustrated with the lack of clear, accurate, and up-to-date tax information for people working in this space. No team, no consultancy firm — just someone who needed a better tool, built it, and decided to make it public. All calculations run entirely client-side inside your browser; we do not store, transmit, or log any of your input data.
             </p>
 
             <h3 className="font-bold text-ink mt-6 mb-1">

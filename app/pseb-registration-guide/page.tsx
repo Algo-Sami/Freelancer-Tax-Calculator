@@ -21,12 +21,12 @@ export default function PsebGuidePage() {
     {
       step: "02",
       title: "Register on PSEB Portal",
-      desc: "Go to the official PSEB portal (registration.pseb.org.pk). Create an account as an 'Individual Freelancer' and complete the online application form."
+      desc: "Go to the official PSEB portal (pseb.org.pk). Create an account as an 'Individual Freelancer' and complete the online application form. Use the registration/login section on the portal to begin."
     },
     {
       step: "03",
       title: "Pay Registration Fee",
-      desc: "Generate the fee payment voucher. The registration fee for individual freelancers is Rs. 1,000 (subject to yearly renewal). Pay via bank transfer or online channels."
+      desc: "Generate the fee payment voucher. The initial registration fee for individual freelancers is Rs. 1,000. Note: annual renewal fees apply separately and may differ from the initial fee — confirm current rates on the PSEB portal (pseb.org.pk) before applying. Pay via bank transfer or online channels."
     },
     {
       step: "04",

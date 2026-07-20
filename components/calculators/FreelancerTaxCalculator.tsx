@@ -159,6 +159,7 @@ export default function FreelancerTaxCalculator() {
           items={receiptItems}
           totalLabel="NET ANNUAL PAYOUT"
           totalAmount={netIncomeValue}
+          sysId="154A-FBR-PK"
           note={
             source === "foreign"
               ? "Calculated under Section 154A of Income Tax Ordinance. Flat final tax."

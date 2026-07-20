@@ -47,15 +47,24 @@ export default function PayoutComparison() {
             return (
               <div 
                 key={idx} 
-                className={`border-2 border-ink p-5 flex flex-col justify-between shadow-[2px_2px_0px_0px_#1C2B22] ${
-                  isWise ? "bg-paper/50 opacity-80" : "bg-white"
+                className={`border-2 p-5 flex flex-col justify-between ${
+                  isWise 
+                    ? "border-ink/30 bg-ink/5 opacity-60 grayscale-[40%]" 
+                    : "border-ink bg-white shadow-[2px_2px_0px_0px_#1C2B22]"
                 }`}
               >
+                {/* Wise: receive-only warning shown FIRST and most prominently */}
+                {isWise && (
+                  <div className="mb-3 border border-stamp/60 bg-stamp/10 p-2 text-[10px] font-space font-bold uppercase text-stamp leading-relaxed">
+                    ⚠ Receive-only in Pakistan — cannot be used for regular withdrawals or balance holds. For reference only.
+                  </div>
+                )}
+
                 <div>
                   <div className="flex justify-between items-center border-b border-ink/20 pb-2 mb-3">
-                    <h4 className="font-space font-extrabold text-sm uppercase text-ledger">{pay.method}</h4>
-                    <span className="font-mono text-xs text-stamp font-bold">
-                      {(pay.totalCostPct * 100).toFixed(1)}% Cost
+                    <h4 className={`font-space font-extrabold text-sm uppercase ${isWise ? "text-ink/50" : "text-ledger"}`}>{pay.method}</h4>
+                    <span className={`font-mono text-xs font-bold ${isWise ? "text-ink/40" : "text-stamp"}`}>
+                      {(pay.totalCostPct * 100).toFixed(1)}% Cost{isWise ? " (ref only)" : ""}
                     </span>
                   </div>
                   
@@ -70,7 +79,7 @@ export default function PayoutComparison() {
                     </div>
                     <div className="flex justify-between border-t border-dotted border-ink/30 pt-1 mt-1 font-bold">
                       <span className="text-ink/80">Net Received:</span>
-                      <span className="text-ledger">{formatUSD(pay.netUSD)}</span>
+                      <span className={isWise ? "text-ink/40" : "text-ledger"}>{formatUSD(pay.netUSD)}</span>
                     </div>
                   </div>
                 </div>
@@ -78,13 +87,15 @@ export default function PayoutComparison() {
                 <div className="border-t border-ink/20 pt-3">
                   <div className="flex justify-between items-baseline mb-2">
                     <span className="font-space text-[10px] font-bold text-ink/65 uppercase">Est. PKR equivalent:</span>
-                    <span className="font-mono text-sm font-extrabold text-ledger underline decoration-double">
+                    <span className={`font-mono text-sm font-extrabold ${isWise ? "text-ink/35 line-through" : "text-ledger underline decoration-double"}`}>
                       {formatPKRFull(pay.netPKR)}
                     </span>
                   </div>
-                  <p className="font-space text-[10px] text-ink/75 lowercase leading-relaxed first-letter:uppercase">
-                    {pay.note}
-                  </p>
+                  {!isWise && (
+                    <p className="font-space text-[10px] text-ink/75 lowercase leading-relaxed first-letter:uppercase">
+                      {pay.note}
+                    </p>
+                  )}
                 </div>
               </div>
             );

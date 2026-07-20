@@ -79,7 +79,7 @@ export default function Footer() {
                   href="/about"
                   className="font-space text-xs uppercase font-bold text-ink/85 hover:text-ledger"
                 >
-                  About Built
+                  About Us
                 </Link>
               </li>
               <li>
